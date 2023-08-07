@@ -2,8 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&display=swap");
 
-
-@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -32,6 +31,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: white !important;
 }
 
 a {
@@ -41,4 +41,211 @@ a {
 
 * {
   box-sizing: border-box;
+}
+.blogHeading {
+  margin-left: 70px;
+}
+/* BlogCard.css */
+.blog-card {
+  border: 1px solid #ccc;
+  background-color: rgb(14, 32, 52);
+  border: 1px solid rgb(14, 32, 52);
+  border-radius: 8px;
+  margin: 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: whitesmoke;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.blog-image-container {
+  position: relative;
+  padding-top: 66.666%; /* 3:2 aspect ratio */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.blog-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.blog-content {
+  padding: 16px;
+  opacity: 0.8;
+  padding: 16px;
+}
+
+.blog-card:hover {
+  transform: scale(1.05);
+}
+
+/* BlogGrid.css */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 16px;
+  background-color: rgb(11, 25, 47);
+  cursor: pointer;
+  padding-top: 3rem;
+  padding-bottom: 10rem;
+}
+
+/* TestimonialCard.css */
+.testimonial-card {
+  background-color: rgb(14, 32, 52);
+  border: 1px solid rgb(14, 32, 52);
+  border-radius: 8px;
+  margin: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.testimonial-image-container {
+  position: relative;
+  padding-top: 66.666%; /* 3:2 aspect ratio */
+  overflow: hidden;
+}
+
+.testimonial-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-content {
+  padding: 16px;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+}
+
+.testimonial-card.fade-entering,
+.testimonial-card.fade-exiting,
+.testimonial-card.fade-exited {
+  opacity: 0;
+}
+
+.testimonial-card.fade-entered {
+  opacity: 1;
+}
+
+/* TestimonialGrid.css */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 16px;
+  background-color: rgb(11, 25, 47);
+  justify-items: center;
+  padding-bottom: 6rem;
+  padding-top: 3rem;
+}
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+figure.snip1192 {
+  font-family: "Raleway", Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  color: #333;
+  text-align: left;
+  box-shadow: none !important;
+  /* padding-bottom: 30%; */
+  cursor: "pointer";
+  background: "#0D2134";
+}
+
+figure.snip1192 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: "pointer";
+}
+figure.snip1192 img {
+  max-width: 100%;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+}
+figure.snip1192 blockquote {
+  margin: 0;
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  background-color: #fafafa;
+  color: #fafafa;
+  opacity: 0.8;
+  background-color: rgb(14, 32, 52);
+  padding: 30px 50px 65px 50px;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0 0 -50px;
+  line-height: 1.6em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  min-height: 279px;
+}
+figure.snip1192 blockquote:before,
+figure.snip1192 blockquote:after {
+  font-family: "FontAwesome";
+  content: "\201C";
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.3;
+  font-style: normal;
+}
+figure.snip1192 blockquote:before {
+  top: 35px;
+  left: 20px;
+}
+figure.snip1192 blockquote:after {
+  content: "\201D";
+  right: 20px;
+  bottom: 35px;
+}
+figure:nth-child(3) > blockquote {
+  padding-top: 60px;
+}
+figure.snip1192 .author {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+figure.snip1192 .author h5 {
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 800;
+}
+figure.snip1192 .author h5 span {
+  font-weight: 400;
+  text-transform: none;
+  display: block;
 }
